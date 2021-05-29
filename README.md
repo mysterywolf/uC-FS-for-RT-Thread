@@ -1,4 +1,4 @@
-# uC/FS for RT-Thread
+# μC/FS for RT-Thread
 
 μC/FS is a compact, reliable, high-performance and thread-safe embedded file system for microprocessors, microcontrollers and DSPs.
 
