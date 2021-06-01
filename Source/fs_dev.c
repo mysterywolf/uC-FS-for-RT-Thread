@@ -1659,10 +1659,10 @@ void FSDev_Invalidate (CPU_CHAR  *name_dev,
     *p_err = FS_ERR_NONE;                                       /* Err clr'd if invalidation can be performed.          */
 
 
-	                                                            /* ----------- INVALIDATE FILES AND VOLUMES ----------- */
+                                                                /* ----------- INVALIDATE FILES AND VOLUMES ----------- */
     p_dev->RefreshCnt++;
 
-		                                                        /* ----------------- RELEASE DEV LOCK ----------------- */
+                                                                /* ----------------- RELEASE DEV LOCK ----------------- */
     FSDev_ReleaseUnlock(p_dev);
 
 }

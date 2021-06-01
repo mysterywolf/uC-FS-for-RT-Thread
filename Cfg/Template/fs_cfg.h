@@ -194,9 +194,9 @@
 *                   |---------------------- FULL NAME LENGTH --------------------|
 *                   |                                                            |
 *
-*                     	     |                                                   |
-*                    	     |----------------- PATH NAME LENGTH ----------------|
-*                    	     |                                                   |
+*                            |                                                   |
+*                            |----------------- PATH NAME LENGTH ----------------|
+*                            |                                                   |
 *
 *                   myvolume:\MyDir0\MyDir1\MyDir2\my_very_very_long_file_name.txt
 *

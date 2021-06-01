@@ -1218,7 +1218,7 @@ static  void  FSDev_SD_SPI_IO_Ctrl (FS_DEV      *p_dev,
 
                                                                 /* Rd CID reg.                                          */
              FSDev_SD_SPI_BSP_SPI.Lock(p_sd_spi_data->UnitNbr);
-		     ok = FSDev_SD_SPI_SendCID(              p_sd_spi_data,
+             ok = FSDev_SD_SPI_SendCID(              p_sd_spi_data,
                                        (CPU_INT08U *)p_data);
              FSDev_SD_SPI_BSP_SPI.Unlock(p_sd_spi_data->UnitNbr);
 

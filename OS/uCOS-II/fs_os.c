@@ -627,7 +627,7 @@ void  FS_OS_DevInit (FS_QTY   dev_cnt,
     }
 
 
-    												            /* ------------ CREATE DEVICE ACCESS LOCKS ------------ */
+                                                                /* ------------ CREATE DEVICE ACCESS LOCKS ------------ */
     FS_OS_DevAccessLockSemTbl = (OS_EVENT **)Mem_HeapAlloc( sizeof(OS_EVENT *) * (CPU_SIZE_T)dev_cnt,
                                                             sizeof(CPU_DATA),
                                                            &octets_reqd,

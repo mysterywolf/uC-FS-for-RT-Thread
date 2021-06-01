@@ -2510,8 +2510,8 @@ void  FSVol_RdLockedEx (FS_VOL      *p_vol,
 
                                                                 /* -------------- CHECK VOLUME VALIDITY --------------- */
     if (p_vol->RefreshCnt != p_vol->DevPtr->RefreshCnt) {       /* Volume is invalid following a device change...       */
-    	*p_err = FS_ERR_DEV_CHNGD;                              /* cannot continue, return with error.                  */
-    	 return;
+        *p_err = FS_ERR_DEV_CHNGD;                              /* cannot continue, return with error.                  */
+         return;
     }
 
 
@@ -2608,16 +2608,16 @@ CPU_BOOLEAN  FSVol_RefreshLocked (FS_VOL  *p_vol,
         }
 
         if(p_vol->RefreshCnt != p_vol->DevPtr->RefreshCnt) {    /*                    ... but dev chngd ...             */
-        	if (p_vol->RefCnt > 2u) {                           /*      ... check if files are open on the volume ...   */
-        		p_vol->State = FS_VOL_STATE_OPEN;               /*      ... if yes, cannot close...                     */
-        	   *p_err = FS_ERR_DEV_CHNGD;
-        		chngd  = DEF_YES;
-        		return (chngd);
-        	} else {
-        		FSSys_VolClose(p_vol);                          /*                            ... otherwise close vol.  */
+            if (p_vol->RefCnt > 2u) {                           /*      ... check if files are open on the volume ...   */
+                p_vol->State = FS_VOL_STATE_OPEN;               /*      ... if yes, cannot close...                     */
+               *p_err = FS_ERR_DEV_CHNGD;
+                chngd  = DEF_YES;
+                return (chngd);
+            } else {
+                FSSys_VolClose(p_vol);                          /*                            ... otherwise close vol.  */
                 p_vol->State = FS_VOL_STATE_OPEN;
                 chngd        = DEF_YES;
-        	}
+            }
         }
     }
 
@@ -2632,8 +2632,8 @@ CPU_BOOLEAN  FSVol_RefreshLocked (FS_VOL  *p_vol,
         }
 
         if (p_vol->RefCnt > 2u) {                               /* Cannot reopen automatically if files are open.       */
-        	*p_err = FS_ERR_DEV_CHNGD;
-        	return (chngd);
+            *p_err = FS_ERR_DEV_CHNGD;
+            return (chngd);
         }
 
         FSVol_OpenLocked(p_vol, p_err);                         /*                                ... reopen vol.       */

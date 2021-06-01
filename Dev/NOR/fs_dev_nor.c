@@ -4103,7 +4103,7 @@ static  FS_SEC_NBR  FSDev_NOR_FindEraseBlkWear (FS_DEV_NOR_DATA  *p_nor_data)
                                                                 /* ... find blk with min erase cnt & valid secs.        */
         blk_ix            = 0u;
         erase_cnt_min     = p_nor_data->EraseCntMax + 1u;
-	    sec_cnt_valid_min = DEF_MIN(p_nor_data->SecCntErased, p_nor_data->BlkSecCnts);
+        sec_cnt_valid_min = DEF_MIN(p_nor_data->SecCntErased, p_nor_data->BlkSecCnts);
         blk_ix_min        = FS_DEV_NOR_SEC_NBR_INVALID;
         while (blk_ix < p_nor_data->BlkCntUsed) {
             FSDev_NOR_GetBlkInfo( p_nor_data,

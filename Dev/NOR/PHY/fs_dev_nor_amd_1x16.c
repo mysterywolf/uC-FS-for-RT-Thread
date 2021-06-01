@@ -840,9 +840,9 @@ static  void  FSDev_NOR_PHY_EraseChip (FS_DEV_NOR_PHY_DATA  *p_phy_data,
 * Note(s)     : none.
 *********************************************************************************************************
 */
-								/* &&&& Temp workaround compile warning.		*/
+                                /* &&&& Temp workaround compile warning.        */
 CPU_BOOLEAN (*void_fptr)(FS_DEV_NOR_PHY_DATA *p_phy_data_arg) = &FSDev_NOR_PHY_PollFnct;
-								/* &&&& Temp workaround compile warning end.		*/
+                                /* &&&& Temp workaround compile warning end.        */
 
 static  CPU_BOOLEAN  FSDev_NOR_PHY_PollFnct (FS_DEV_NOR_PHY_DATA  *p_phy_data)
 {

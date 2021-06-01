@@ -321,7 +321,7 @@ void               FSDev_Wr                 (CPU_CHAR            *name_dev,    /
 #endif
 
 void               FSDev_Invalidate         (CPU_CHAR            *name_dev,    /* Invalidate opened volumes and files.     */
-		                                     FS_ERR              *p_err);
+                                             FS_ERR              *p_err);
 
 void               FSDev_AccessLock         (CPU_CHAR            *name_dev,    /* Acquire device access lock.              */
                                              CPU_INT32U           timeout,

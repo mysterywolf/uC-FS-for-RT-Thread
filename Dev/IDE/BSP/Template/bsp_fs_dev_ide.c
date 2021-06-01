@@ -498,8 +498,8 @@ void  FSDev_IDE_BSP_DataWr (FS_QTY       unit_nbr,
 * Return(s)   : none.
 *
 * Note(s)     : (1) DMA setup occurs before the command is executed (in 'FSDev_IDE_BSP_CmdWr()'.
-*					Afterwards, data transmission completion must be confirmed (in 'FSDev_IDE_BSP_DMA_End()')
-*					before the driver checks the command status.
+*                   Afterwards, data transmission completion must be confirmed (in 'FSDev_IDE_BSP_DMA_End()')
+*                   before the driver checks the command status.
 *
 *               (2) If the return value of 'FSDev_IDE_BSP_GetModesSupported()' does NOT include
 *                  'FS_DEV_IDE_MODE_TYPE_DMA' or 'FS_DEV_IDE_MODE_TYPE_UDMA', this function need not

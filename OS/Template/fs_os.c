@@ -464,7 +464,7 @@ void  FS_OS_DevUnlock (FS_ID  dev_id)
 */
 
 void  FS_OS_DevAccessLock (FS_ID       dev_id,
-	                       CPU_INT32U  timeout,
+                           CPU_INT32U  timeout,
                            FS_ERR     *p_err)
 {
     /* #### Block until device access lock 'dev_id' is acquired. */
